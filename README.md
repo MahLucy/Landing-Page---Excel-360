@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Curso Excel 360 — Do Zero à Produtividade Profissional
 
-## Getting Started
+Landing page desenvolvida para o **Curso Excel 360**, um projeto educacional voltado a ensinar Excel de forma prática, acessível e moderna.  
+O site tem como objetivo apresentar o curso, destacar seus diferenciais e facilitar a inscrição de novos alunos.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias utilizadas
+
+- **Next.js** — Framework React para aplicações rápidas e otimizadas  
+- **React** — Biblioteca JavaScript para criação de interfaces interativas  
+- **Chakra UI** — Biblioteca de componentes para design responsivo e acessível  
+- **TypeScript** — Tipagem estática para maior segurança no código  
+- **Framer Motion** — Animações suaves e interativas  
+- **Vercel** — Hospedagem e deploy contínuo
+
+---
+
+## 💡 Principais recursos
+
+- 🎥 **Seção de trailer** com vídeo incorporado do curso  
+- 📚 **Apresentação dos módulos** de aprendizado  
+- 💰 **Seção de preços** e chamadas para inscrição  
+- ❓ **FAQ interativo** com perguntas frequentes  
+- 💬 **Feedbacks reais** de alunos e profissionais  
+- 📱 **Layout 100% responsivo**, adaptado para dispositivos móveis  
+- ⚡ **Performance otimizada** para SEO e campanhas digitais
+
+---
+
+## 🧩 Estrutura de pastas
+
+```
+/src
+├── app
+│   ├── components    # Componentes reutilizáveis (Hero, FAQ, Feedback, etc.)
+│   ├── imagens       # Imagens e ícones utilizados no site
+│   ├── styles        # Estilos globais e customizações do Chakra UI
+│   ├── pages         # Rotas principais do site
+│   └── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🖥️ Como executar o projeto localmente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone este repositório
+git clone https://github.com/MahLucy/curso-excel-360.git
 
-## Learn More
+# Acesse a pasta do projeto
+cd curso-excel-360
 
-To learn more about Next.js, take a look at the following resources:
+# Instale as dependências
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Execute o servidor de desenvolvimento
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Acesse no navegador
+http://localhost:3000
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Hospedagem
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O projeto está hospedado no **Hostinger**.  
+
+---
+
+## 🧠 Sobre o projeto
+
+O **Curso Excel 360** foi criado para ajudar profissionais e estudantes a dominar o Excel do básico ao avançado, com foco em produtividade e aplicação real no dia a dia.  
+O site foi desenvolvido para refletir essa proposta — moderno, fluido e com comunicação clara.
+
+---
+
+## ✨ Autor
+
+**Desenvolvido por [Mayara Lucy](https://github.com/MahLucy)**  
+💌 Entre em contato: mayara-lucy@live.com 
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença **MIT**.  
+Sinta-se à vontade para usar, estudar e modificar, desde que mantenha os créditos ao autor.
