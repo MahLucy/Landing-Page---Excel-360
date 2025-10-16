@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { IconButton } from '@chakra-ui/react'
+import { IconButton, useBreakpointValue  } from '@chakra-ui/react'
 import { ChevronUpIcon } from '@chakra-ui/icons'
 
 export default function ScrollToTopButton() {
   const [showButton, setShowButton] = useState(false)
+  const isMobile = useBreakpointValue({ base: true, md: false })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,8 @@ export default function ScrollToTopButton() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+    // Se for mobile, não renderiza o botão
+  if (isMobile) return null
 
   return (
     <>

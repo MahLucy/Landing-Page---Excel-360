@@ -14,30 +14,38 @@ import {
   VStack,
   Image,
 } from '@chakra-ui/react'
-
 import { CheckIcon } from '@chakra-ui/icons'
-
 import Estrela from '@/app/imagens/Estrela.png'
-//import Estrela from '../imagens/Estrela.png'
-
-
 
 export default function PrecoCurso() {
   return (
     <Box
       pos="relative"
       py={{ base: 12, md: 20 }}
-      bgImage="url('./Fundo.png')"
+      bgImage="url('/Fundo.png')"            // garanta que esteja em /public/Fundo.png
       bgPos="center"
       bgSize="cover"
       bgRepeat="no-repeat"
-  
     >
-      <Container maxW="7xl" pos="relative" >
+      <Container maxW="7xl" pos="relative">
         {/* Título / subtítulo */}
         <Stack spacing={3} textAlign="center" mb={{ base: 8, md: 12 }}>
-          <Heading size="lg" fontFamily={'inter'} color={'#26262A'} fontWeight={'bold'}>Preço Simplificado</Heading>
-          <Text color="#70869C" maxW="3xl" mx="auto" fontWeight={'bold'} fontFamily={'montserrat'}>
+          <Heading
+            fontFamily="inter"
+            color="#26262A"
+            fontWeight="bold"
+            fontSize={{ base: 'xl', md: '2xl' }}
+          >
+            Preço Simplificado
+          </Heading>
+          <Text
+            color="#70869C"
+            maxW="3xl"
+            mx="auto"
+            fontWeight="bold"
+            fontFamily="montserrat"
+            fontSize={{ base: 'sm', md: 'md' }}
+          >
             Aprenda com aulas práticas e exercícios a criar planilhas, relatórios e
             dashboards de forma independente, impressionando chefes e recrutadores.
           </Text>
@@ -48,8 +56,8 @@ export default function PrecoCurso() {
           pos="relative"
           bg="white"
           rounded="2xl"
-          px={{ base: 6, md: 10 }}
-          py={{ base: 8, md: 10 }}
+          px={{ base: 4, sm: 6, md: 10 }}
+          py={{ base: 6, sm: 8, md: 10 }}
           boxShadow="0 20px 20px rgba(0, 0, 0, 0.18), 0 10px 30px rgba(0, 0, 0, 0.15)"
           _after={{
             content: '""',
@@ -57,40 +65,39 @@ export default function PrecoCurso() {
             inset: 0,
             boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.04)',
             pointerEvents: 'none',
-           
           }}
         >
-      {/* Estrelinha -50% */}
-      <Box
-        pos="absolute"
-        top={{ base: -7, md: -8, lg: -10 }}
-        left={{ base: -7, md: -8, lg: -12 }}
-        w={{ base: 28, md: 36, lg: 44 }}
-        h={{ base: 28, md: 36, lg: 44 }}
-      >
-        <Image
-          src={Estrela.src}
-          alt="Desconto"
-          w="100%"
-          h="100%"
-          objectFit="contain"
-          pointerEvents="none"
-        />
-        <Text
-          pos="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          // opcional: aumente a fonte junto
-          fontSize={{ base: 'sm', md: 'xl', lg: '4xl' }}
-          fontWeight="bold"
-          color="white"
-          fontFamily="Montserrat"
-        >
-          -50%
-        </Text>
-      </Box>
-
+          {/* Estrelinha -50% */}
+          <Box
+            pos="absolute"
+            top={{ base: -4, sm: -6, md: -8, lg: -10 }}
+            left={{ base: -4, sm: -6, md: -8, lg: -12 }}
+            w={{ base: 20, sm: 24, md: 36, lg: 44 }}
+            h={{ base: 20, sm: 24, md: 36, lg: 44 }}
+            overflow="visible"
+          >
+            <Image
+              src={Estrela.src}
+              alt="Desconto"
+              w="100%"
+              h="100%"
+              objectFit="contain"
+              pointerEvents="none"
+            />
+            <Text
+              pos="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              fontSize={{ base: 'xs', sm: 'sm', md: 'xl', lg: '4xl' }}
+              fontWeight="bold"
+              color="white"
+              fontFamily="Montserrat"
+              userSelect="none"
+            >
+              -50%
+            </Text>
+          </Box>
 
           <SimpleGrid
             columns={{ base: 1, md: 2 }}
@@ -98,70 +105,99 @@ export default function PrecoCurso() {
             pl={{ base: 0, md: '5rem' }}
             pr={{ base: 0, md: '5rem' }}
             pt={{ base: 0, md: '5rem' }}
-            alignItems={'center'}
-            >
+            alignItems="center"
+          >
             {/* Coluna esquerda: preço */}
-            <VStack align="start">
-              {/* Preço antigo riscado */}
+            <VStack align="start" spacing={{ base: 3, md: 4 }}>
               <Text
-                fontSize="lg"
+                fontSize={{ base: 'sm', md: 'lg' }}
                 fontWeight="bold"
                 color="#70869C"
                 textDecoration="line-through"
-                mb={2}
-                fontFamily={'montserrat'}
+                fontFamily="montserrat"
+                alignSelf={{ base: 'center', md: 'flex-start' }}
               >
                 De R$2.000,00
               </Text>
 
-              <HStack align="baseline" spacing={1} alignItems="flex-end">
-                <Box display="flex" alignItems="flex-start" flexDirection="column" >
-                  <Text fontSize="3rem" fontWeight="extrabold" fontFamily={'montserrat'} marginBottom={'-1rem'}>
+              <HStack w="full" justify={{ base: 'center', md: 'flex-start' }} align="end" spacing={{ base: 1, md: 1 }} alignItems="flex-end">
+                <Box display="flex" alignItems="flex-start" flexDirection="column">
+                  <Text
+                    fontSize={{ base: '2xl', sm: '3xl', md: '3rem' }}
+                    fontWeight="extrabold"
+                    fontFamily="montserrat"
+                    mb={{ base: '-4px', md: '1vh' }}
+                    lineHeight="1"
+                  >
                     12X
                   </Text>
                   <Text
-                    fontSize="4rem"
+                    fontSize={{ base: '3xl', sm: '4xl', md: '4rem' }}
                     fontWeight="extrabold"
                     color="#19C174"
-                    mt="-1rem"
-                    fontFamily={'montserrat'}
+                    mt={{ base: '-2px', md: '-1rem' }}
+                    fontFamily="montserrat"
+                    lineHeight="1"
                   >
                     R$
                   </Text>
                 </Box>
+
                 <Text
-                  fontSize="10rem"
+                  fontSize={{ base: '7rem', sm: '8rem', md: '8rem', lg: '10rem' }}  // ⬅️ Aumentado no mobile
                   fontWeight="extrabold"
                   lineHeight="0.9"
                   color="#19C174"
-                  fontFamily={'inter'}
+                  fontFamily="inter"
                 >
                   8
                 </Text>
+
                 <Text
-                  fontSize="3rem"
+                  fontSize={{ base: '2xl', sm: '3xl', md: '3rem' }}  // ⬅️ Aumentado no mobile
                   fontWeight="bold"
                   color="#19C174"
-                  ml="-0.5rem"
-                  fontFamily={'inter'}
-
+                  ml={{ base: 0, md: '-0.5rem' }}
+                  fontFamily="inter"
+                  alignSelf="flex-end"
+                  pb={{ base: '10px', sm: '14px', md: '18px' }}
+                  lineHeight="1"
                 >
                   ,30
                 </Text>
               </HStack>
 
-              <Box>
-                <Text fontSize="lg" color="#31373D" fontFamily={'montserrat'}  >
+
+                <Box
+                  w="full"
+                  display="flex"
+                  flexDirection="column"
+                  alignItems={{ base: 'center', md: 'flex-start' }} // centraliza no mobile
+                  textAlign={{ base: 'center', md: 'left' }}       // centraliza o texto no mobile
+                >
+                <Text
+                  fontSize={{ base: 'sm', md: 'lg' }}
+                  alignItems={{ base: 'center', md: 'flex-start' }}
+                  color="#31373D"
+                  fontFamily="montserrat"
+                  justifyItems={{ base: 'center', md: 'flex-start' }}
+
+                >
                   Ou R$ 100,00 à vista, preço único.
                 </Text>
-                <Text fontSize="lg" fontWeight="extrabold" color="#31373D" fontFamily={'montserrat'}>
+                <Text
+                  fontSize={{ base: 'sm', md: 'lg' }}
+                  fontWeight="extrabold"
+                  color="#31373D"
+                  fontFamily="montserrat"
+                >
                   Sem surpresas.
                 </Text>
               </Box>
             </VStack>
 
             {/* Coluna direita: benefícios */}
-            <Stack spacing={5} pt={{ base: 2, md: 0 }} fontFamily={'montserrat'}>
+            <Stack spacing={5} pt={{ base: 2, md: 0 }} fontFamily="montserrat">
               {[
                 'Professor qualificado com experiência prática',
                 'Curso completo disponível logo após a compra',
@@ -170,7 +206,14 @@ export default function PrecoCurso() {
               ].map((t, i) => (
                 <HStack key={i} align="start" spacing={3}>
                   <Icon as={CheckIcon} color="#19C174" mt="6px" />
-                  <Text color="#31373D" fontWeight={'semibold'} fontFamily={'montserrat'}>{t}</Text>
+                  <Text
+                    color="#31373D"
+                    fontWeight="semibold"
+                    fontFamily="montserrat"
+                    fontSize={{ base: 'sm', md: 'md' }}
+                  >
+                    {t}
+                  </Text>
                 </HStack>
               ))}
             </Stack>
@@ -178,21 +221,26 @@ export default function PrecoCurso() {
 
           <Divider my={{ base: 6, md: 8 }} opacity={0.2} />
 
-          {/* Botão central */}
+          {/* Botão central — responsivo */}
           <Stack align="center">
             <Button
+              aria-label="Comprar agora"
               color="white"
               bgGradient="linear(to-r, #218F60, #28B779, #1F8C5E)"
               _hover={{ bg: 'green.700' }}
-              px={'8rem'}
-              fontSize={'2xl'}
+              w={{ base: '100%', sm: 'auto' }}
+              maxW={{ base: '100%', sm: 'unset' }}
+              px={{ base: 6, sm: 10, md: 16, lg: 24 }} // antes era '8rem'
+              py={{ base: 4, md: 6 }}                  // antes era '2rem'
+              fontSize={{ base: 'lg', sm: 'xl', md: '2xl' }}
               fontWeight="bold"
-              fontFamily={'inter'}
-              padding={'2rem'}
-              paddingLeft={'4rem'}
-              paddingRight={'4rem'}
+              fontFamily="inter"
               borderRadius="2xl"
               boxShadow="lg"
+              as="a"
+              href="https://hotmart.com/pt-br/marketplace/produtos/excel-360-do-zero-a-produtividade-profissional/A102209262W"  
+              target="_blank"                                    
+              rel="noopener noreferrer"                          
             >
               COMPRAR AGORA
             </Button>
